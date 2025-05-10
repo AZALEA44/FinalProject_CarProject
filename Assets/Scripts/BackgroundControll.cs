@@ -10,7 +10,7 @@ public class BackgroundControll : MonoBehaviour
 
     private float lengthZ;
 
-    [SerializeField] private float scrollSpeed = -5f; // ให้เลื่อนเข้าหากล้อง
+    [SerializeField] private float scrollSpeed ; 
 
     private void Start()
     {
@@ -22,8 +22,8 @@ public class BackgroundControll : MonoBehaviour
 
         // ตั้งค่า Rigidbody
         rb.useGravity = false;
-        rb.isKinematic = false; // ใช้ฟิสิกส์จริง
-        rb.constraints = RigidbodyConstraints.FreezeRotation; // ล็อกการหมุน
+        rb.isKinematic = false; 
+        rb.constraints = RigidbodyConstraints.FreezeRotation; 
 
         // กำหนดความยาวตามแกน Z
         lengthZ = colliderControll.size.z * transform.localScale.z;
