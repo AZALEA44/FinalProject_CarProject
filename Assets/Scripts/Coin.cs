@@ -6,8 +6,8 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Coin collected!");
-            Destroy(gameObject);
+            CoinCollector.coinCount++; // static counter
+            Destroy(gameObject); // remove coin
         }
     }
 }
