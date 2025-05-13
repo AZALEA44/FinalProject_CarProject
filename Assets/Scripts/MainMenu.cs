@@ -8,13 +8,15 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("1player"); 
     }
-
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     public void twoPlayer()
     {
         SceneManager.LoadScene("2player");
     }
 
-    
     public void History()
     {
         SceneManager.LoadScene("PlayHistory"); 
