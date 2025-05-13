@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 262702364}
   - component: {fileID: 262702363}
   m_Layer: 5
-  m_Name: Distance 2
+  m_Name: Time 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Distance : -'
+  m_text: 'Time : -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 468474874}
   - component: {fileID: 468474873}
   m_Layer: 5
-  m_Name: Distance 2
+  m_Name: Time 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Distance : -'
+  m_text: 'Time : -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1577,7 +1577,7 @@ GameObject:
   - component: {fileID: 1011137952}
   - component: {fileID: 1011137951}
   m_Layer: 5
-  m_Name: Distance 1
+  m_Name: Time 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Distance : -'
+  m_text: 'Time : -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1760,8 +1760,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   POneCoinText: {fileID: 1987530443}
   PTwoCoinText: {fileID: 48082267}
-  POneDistanceText: {fileID: 1011137951}
-  PTwoDistanceText: {fileID: 468474873}
+  POneTimeText: {fileID: 1011137951}
+  PTwoTimeText: {fileID: 468474873}
+  POneHightSCoinText: {fileID: 325783842}
+  PTwoHightSCoinText: {fileID: 1682552809}
+  POneHightSTimeText: {fileID: 1486931810}
+  PTwoHightSTimeText: {fileID: 262702363}
 --- !u!1 &1185541082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2282,7 @@ GameObject:
   - component: {fileID: 1486931811}
   - component: {fileID: 1486931810}
   m_Layer: 5
-  m_Name: Distance 1
+  m_Name: Time 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2323,7 +2327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Distance : -'
+  m_text: 'Time : -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
