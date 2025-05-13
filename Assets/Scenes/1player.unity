@@ -958,6 +958,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 237948787}
   highscoreText: {fileID: 1962681518}
+  time: 0
+  HighScoreCount: 0
 --- !u!4 &1321666569
 Transform:
   m_ObjectHideFlags: 0
@@ -1336,7 +1338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  limitX: 5
+  limitX: 6
   playerType: 0
   defaultP1Color: {r: 1, g: 0, b: 0, a: 1}
   defaultP2Color: {r: 0, g: 0, b: 1, a: 1}
