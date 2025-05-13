@@ -16,6 +16,7 @@ public class SpeedItem : MonoBehaviour
             if (TimeManager.Instance != null)
             {
                 TimeManager.Instance.BoostTime(speedMultiplier, speedDuration);
+                SoundEffectManager.Instance.Play("Speed");
             }
 
             Destroy(gameObject); // Now it's safe to destroy

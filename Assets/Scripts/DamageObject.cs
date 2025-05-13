@@ -14,6 +14,7 @@ public class DamageObject : MonoBehaviour
             {
                 // Call the TakeDamage function to reduce the player's health by 1
                 playerHealth.TakeDamage(1);
+                SoundEffectManager.Instance.Play("Hit");
 
                 // Optionally, destroy this object when the player loses health
                 Destroy(gameObject);  // Destroys the object that this script is attached to

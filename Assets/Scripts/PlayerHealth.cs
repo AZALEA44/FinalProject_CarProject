@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        CoinCollector.coinCount = 0;
         UpdateHealthUI();
     }
 
@@ -46,6 +47,8 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log("Player is dead!");
+
+        SoundEffectManager.Instance.Play("Dead");
 
         // Stop timer
         if (speedrunTimer != null)

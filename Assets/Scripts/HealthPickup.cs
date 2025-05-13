@@ -16,6 +16,7 @@ public class HealthPickup : MonoBehaviour
             {
                 // Heal the player by the specified amount
                 playerHealth.Heal(healAmount);
+                SoundEffectManager.Instance.Play("HP");
 
                 // Log the success
                 Debug.Log("Healing player: " + healAmount);
