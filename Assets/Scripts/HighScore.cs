@@ -1,27 +1,27 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class SpeedrunTimer : MonoBehaviour
+public class HighScore : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI highscoreText;
-
-    private float timeElapsed = 0f;
+    public float time = 0f;
     private bool isRunning = true;
-
+    public float HighScoreCount;
     void Start()
     {
+        //PlayerPrefs.SetFloat("Highscore", 0f);
         // Load and show saved highscore
-        float savedHighscore = PlayerPrefs.GetFloat("Highscore", 0f);
-        highscoreText.text = "Highscore: " + savedHighscore.ToString("F2") + "s";
+        HighScoreCount = PlayerPrefs.GetFloat("Highscore", 0f);
+        highscoreText.text = "Highscore: " + HighScoreCount.ToString("F2") + "s";
     }
 
     void Update()
     {
         if (isRunning)
         {
-            timeElapsed += Time.deltaTime;
-            timerText.text = "Time: " + timeElapsed.ToString("F2") + "s";
+            time += Time.deltaTime;
+            timerText.text = "Time: " + time.ToString("F2") + "s";
         }
 
         // Optional: Restart on R key
@@ -38,16 +38,17 @@ public class SpeedrunTimer : MonoBehaviour
     {
         isRunning = false;
 
-        float savedHighscore = PlayerPrefs.GetFloat("Highscore", 0f);
-        if (timeElapsed > savedHighscore)
+        HighScoreCount = PlayerPrefs.GetFloat("Highscore", 0f);
+        if (time > HighScoreCount)
         {
             // Only save if new time is better
-            PlayerPrefs.SetFloat("Highscore", timeElapsed);
+            PlayerPrefs.SetFloat("Highscore", time);
             PlayerPrefs.Save();
         }
 
         // Show updated highscore (even if unchanged)
         float currentHighscore = PlayerPrefs.GetFloat("Highscore", 0f);
         highscoreText.text = "Highscore: " + currentHighscore.ToString("F2") + "s";
+
     }
 }
