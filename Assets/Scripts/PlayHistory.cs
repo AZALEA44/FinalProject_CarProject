@@ -3,82 +3,47 @@ using UnityEngine;
 
 public class PlayHistory : MonoBehaviour
 {
-    int POneCoinSample = 0;
-    int PTwoCoinSample = 0;
-    float POneTimeSample = 0;
-    float PTwoTimeSample = 0;
-    int POneHightSCoinSample = 0;
-    int PTwoHightSCoinSample = 0;
-    float POneHightSTimeSample = 0;
-    float PTwoHightSTimeSample = 0;
-    [SerializeField] TextMeshProUGUI POneCoinText;
-    [SerializeField] TextMeshProUGUI PTwoCoinText;
-    [SerializeField] TextMeshProUGUI POneTimeText;
-    [SerializeField] TextMeshProUGUI PTwoTimeText;
-    [SerializeField] TextMeshProUGUI POneHightSCoinText;
-    [SerializeField] TextMeshProUGUI PTwoHightSCoinText;
-    [SerializeField] TextMeshProUGUI POneHightSTimeText;
-    [SerializeField] TextMeshProUGUI PTwoHightSTimeText;
+    int POneHighSCoinSample = 0;
+    int PTwoHighSCoinSample = 0;
+    float POneHighSTimeSample = 0;
+    float PTwoHighSTimeSample = 0;
+    [SerializeField] TextMeshProUGUI POneHighSCoinText;
+    [SerializeField] TextMeshProUGUI PTwoHighSCoinText;
+    [SerializeField] TextMeshProUGUI POneHighSTimeText;
+    [SerializeField] TextMeshProUGUI PTwoHighSTimeText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        POneCoinSample = 2;
-        PTwoCoinSample = 4;
-        POneTimeSample = 1;
-        PTwoTimeSample = 2;
-        POneHightSCoinSample = 7;
-        PTwoHightSCoinSample = 8;
-        POneHightSTimeSample = 3;
-        PTwoHightSTimeSample = 4;
+        POneHighSCoinSample = 8;// PlayerPrefs.GetInt("Coin", 0);
+        PTwoHighSCoinSample = 8;
+        POneHighSTimeSample = PlayerPrefs.GetFloat("Highscore", 0f);
+        PTwoHighSTimeSample = 4;
         UpdateText();
     }
     void UpdateText()
     {
-        //LastGame
-        //Player1
-        if (POneTimeSample <= 0)
-        {
-            POneCoinText.text = "Coin : - ";
-            POneTimeText.text = "Time : - sec.";
-        }
-        else
-        {
-            POneCoinText.text = $"Coin : {POneCoinSample.ToString()}";
-            POneTimeText.text = $"Time : {POneTimeSample.ToString()} sec.";
-        }
-        //Player2
-        if ( PTwoTimeSample <= 0)
-        {
-            PTwoCoinText.text = "Coin : - ";
-            PTwoTimeText.text = "Time : - sec.";
-        }
-        else
-        {
-            PTwoCoinText.text = $"Coin : {PTwoCoinSample.ToString()}";
-            PTwoTimeText.text = $"Time : {PTwoTimeSample.ToString()} sec.";
-        }
         //HightScore
         //Player1
-        if (POneHightSTimeSample <= 0)
+        if (POneHighSTimeSample <= 0)
         {
-            POneHightSCoinText.text = "Coin : - ";
-            POneHightSTimeText.text = "Time : - sec.";
+            POneHighSCoinText.text = "Coin : - ";
+            POneHighSTimeText.text = "Time : - sec.";
         }
         else
         {
-            POneHightSCoinText.text = $"Coin : {POneHightSCoinSample.ToString()}";
-            POneHightSTimeText.text = $"Time : {POneHightSTimeSample.ToString()} sec.";
+            POneHighSCoinText.text = $"Coin : {POneHighSCoinSample.ToString()}";
+            POneHighSTimeText.text = $"Time : {POneHighSTimeSample.ToString("F2")} sec.";
         }
         //Player2
-        if (PTwoTimeSample <= 0)
+        if (PTwoHighSTimeSample <= 0)
         {
-            PTwoHightSCoinText.text = "Coin : - ";
-            PTwoHightSTimeText.text = "Time : - sec.";
+            PTwoHighSCoinText.text = "Coin : - ";
+            PTwoHighSTimeText.text = "Time : - sec.";
         }
         else
         {
-            PTwoHightSCoinText.text = $"Coin : {PTwoHightSCoinSample.ToString()}";
-            PTwoHightSTimeText.text = $"Time : {PTwoHightSTimeSample.ToString()} sec.";
+            PTwoHighSCoinText.text = $"Coin : {PTwoHighSCoinSample.ToString()}";
+            PTwoHighSTimeText.text = $"Time : {PTwoHighSTimeSample.ToString("F2")} sec.";
         }
     }
 }

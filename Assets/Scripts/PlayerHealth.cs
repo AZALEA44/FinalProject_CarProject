@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI healthText;
 
     // ?? Add this reference
-    public SpeedrunTimer speedrunTimer;
+    public HighScore speedrunTimer;
 
     void Start()
     {
@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Player is dead!");
 
         // Stop the timer and save the time
-        FindObjectOfType<SpeedrunTimer>().StopAndSaveTime();
+        FindObjectOfType<HighScore>().StopAndSaveTime();
 
         // Pause game
         Time.timeScale = 0f;
