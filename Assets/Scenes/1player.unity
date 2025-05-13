@@ -937,7 +937,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1321666569}
   - component: {fileID: 1321666568}
-  - component: {fileID: 1321666570}
   m_Layer: 0
   m_Name: HighScore
   m_TagString: Untagged
@@ -1033,6 +1032,7 @@ GameObject:
   - component: {fileID: 1398407577}
   - component: {fileID: 1398407576}
   - component: {fileID: 1398407575}
+  - component: {fileID: 1398407579}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1126,6 +1126,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1398407579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398407574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e630f302ee7cf48a98d7302e69b74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  offsetX: 6
+  limitX: 2
 --- !u!1 &1406247060
 GameObject:
   m_ObjectHideFlags: 0
