@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    public GameObject obstaclePrefab; // The obstacle prefab to spawn
+    public GameObject[] obstaclePrefabs; // Array of obstacle prefabs to choose from
     public float spawnInterval = 2f; // Time interval between spawns
     public float spawnHeight = 10f; // Height where obstacles will spawn
     public float spawnAreaWidth = 10f; // Width of the spawn area (X axis)
@@ -55,7 +55,10 @@ public class ObstacleSpawner : MonoBehaviour
         // Convert spawn position to world space based on the spawn area's position and rotation
         spawnPosition = spawnArea.TransformPoint(spawnPosition);
 
-        // Instantiate the obstacle at the chosen position
-        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+        // Choose a random obstacle prefab from the array
+        GameObject selectedObstacle = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
+
+        // Instantiate the selected obstacle at the chosen position
+        Instantiate(selectedObstacle, spawnPosition, Quaternion.identity);
     }
 }
