@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -58,8 +59,10 @@ public class PlayerHealth : MonoBehaviour
             PlayerPrefs.SetInt("HighScoreCoins", currentCoins);
             PlayerPrefs.Save();
         }
+        
 
         Time.timeScale = 0f;
+        SceneManager.LoadScene("Dead");
     }
 
 
