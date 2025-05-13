@@ -814,6 +814,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 126218, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1766305386}
+    - targetCorrespondingSourceObject: {fileID: 126218, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1766305388}
   m_SourcePrefab: {fileID: 100100000, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
 --- !u!1001 &974359749
 PrefabInstance:
@@ -934,7 +937,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1321666569}
   - component: {fileID: 1321666568}
-  - component: {fileID: 1321666570}
   m_Layer: 0
   m_Name: HighScore
   m_TagString: Untagged
@@ -971,19 +973,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1321666570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321666567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31df1753044c6f645b86bdd951397ed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canRestart: 0
 --- !u!1 &1385500137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1019,7 @@ GameObject:
   - component: {fileID: 1398407577}
   - component: {fileID: 1398407576}
   - component: {fileID: 1398407575}
+  - component: {fileID: 1398407579}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1123,6 +1113,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1398407579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398407574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e630f302ee7cf48a98d7302e69b74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  offsetX: 6
+  limitX: 2
 --- !u!1 &1406247060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1339,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 2093150375}
+--- !u!114 &1766305388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454540247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520274b5f4f5ed04292443574dd0ac2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  limitX: 5
 --- !u!1 &1786466656
 GameObject:
   m_ObjectHideFlags: 0

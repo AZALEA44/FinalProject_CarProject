@@ -52,8 +52,7 @@ public class PlayerHealth : MonoBehaviour
         // Pause game
         Time.timeScale = 0f;
 
-        // Optional: show "Press R to restart"
-        FindObjectOfType<RestartOnKey>().canRestart = true;
+        
     }
 
 }
