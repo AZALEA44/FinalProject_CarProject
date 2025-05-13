@@ -46,13 +46,21 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player is dead!");
 
-        // Stop the timer and save the time
-        FindObjectOfType<HighScore>().StopAndSaveTime();
+        // Stop timer
+        if (speedrunTimer != null)
+            speedrunTimer.StopAndSaveTime();
 
-        // Pause game
+        // Save high coin score
+        int currentCoins = CoinCollector.coinCount;
+        int previousHigh = PlayerPrefs.GetInt("HighScoreCoins", 0);
+        if (currentCoins > previousHigh)
+        {
+            PlayerPrefs.SetInt("HighScoreCoins", currentCoins);
+            PlayerPrefs.Save();
+        }
+
         Time.timeScale = 0f;
-
-        
     }
+
 
 }
