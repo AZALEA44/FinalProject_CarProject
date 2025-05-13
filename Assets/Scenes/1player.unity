@@ -814,6 +814,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 126218, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1766305386}
+    - targetCorrespondingSourceObject: {fileID: 126218, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1766305388}
   m_SourcePrefab: {fileID: 100100000, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
 --- !u!1001 &974359749
 PrefabInstance:
@@ -1334,6 +1337,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 2093150375}
+--- !u!114 &1766305388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454540247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520274b5f4f5ed04292443574dd0ac2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  limitX: 5
+  playerType: 0
+  defaultP1Color: {r: 1, g: 0, b: 0, a: 1}
+  defaultP2Color: {r: 0, g: 0, b: 1, a: 1}
 --- !u!1 &1786466656
 GameObject:
   m_ObjectHideFlags: 0
